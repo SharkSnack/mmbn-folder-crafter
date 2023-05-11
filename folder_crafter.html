@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <title>Folder Crafter - MMBN</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/jpg" href="./images/Logo.png"/>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="scripts.js"></script>
+        <script>
+            $(document).bind("contextmenu",function(e){
+            e.preventDefault();  
+        });
+        </script>
+    </head>
+<body onload="initChipFolder()">
+    <div class="topbanner">
+        <h1>MMBN Folder Crafter</h1>
+    </div>
+    <div class="mainBody" style="display: flex;">
+        <div style="display: flex;">
+            <div style="position: relative;min-width: 20vh;max-width: 20vh;">
+                <label for="gameVersion">Game version</label><br>
+                <select id="gameVersion" style="width: 90%"; onchange="ReloadChips()">
+                    <option value="bn1">Battle Network 1</option>
+                    <option value="bn2">Battle Network 2</option>
+                    <option value="bn3">Battle Network 3</option>
+                    <option value="bn4">Battle Network 4</option>
+                    <option value="bn5">Battle Network 5</option>
+                    <option value="bn6">Battle Network 6</option>
+                </select><br/><br/>
+                <label for="search_chipName">Chip Name: </label>
+                <input type="text" id="search_chipName" style="width: 90%;" onchange="FilterChips()"/>
+                <br/><br/>
+                <label for="search_chipCode">Chip Code: </label>
+                <input type="text" id="search_chipCode" style="width: 90%;" onchange="FilterChips()"/>
+                <br /><br />
+                <a class="anchorButton" style="width: 100px;"onclick="FilterChips()">Filter</a>
+                <p><b>How to Use</b></p>
+                <p>
+                    1. Select game.<br/>
+                    2. Click on chips<br/>　to add to folder.<br/>
+                    3. Right-click on a<br/>　chip to remove it.<br/>
+                    4. Export folder to<br/>　share with others.<br/>
+                    5. Import folder to<br/>　edit others' chips.
+                </p>
+                <p><b>Notes</b></p>
+                <p>
+                    Hover over code to<br/>see chip locations.<br/><br/>
+                    Hover over name to<br/>see chip description<br/>and memory size.
+                </p>
+            </div>
+            <div style="position: relative;">
+                <h3>Chips</h3>
+                <div style="height:80vh; overflow-y:scroll" >
+                    <table class="bntable" id="chipTable">
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="folderDiv" style="display: flex; flex:1; min-width: 50vh;max-width: 50vh">
+            <div style="position: relative;min-width: 50vh;max-width: 50vh">
+                <h3 style="padding-left: 20px" id="folderHeader">Folder: 0 Chips</h3>
+                <div id="folderDivTable" style="flex:1; overflow-y:scroll;padding-left: 20px;">
+                    <table class="bntable" id="folderChipTable">
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div style="">
+            <div style="position: relative;">
+                <label for="exportLocations" >Include Chip Location in Export</label>
+                <input type="checkbox" id="exportLocations"/><br /></div>
+                <a class="anchorButton" onclick="ExportFolder()">Export Folder</a>
+            <br />
+            <label for="importChipFile">Import Chip Data:</label>
+            <div><textArea id="importChipFile" style="height: 400px; width: 300px;"></textArea></div>
+            <div><a class="anchorButton" onclick="ImportFolder()">Import Folder</a></div>
+            <br />
+        </div>
+    </div>
+    <div class="footer">
+        Credits: Dillonzer (original app), SharkSnack (UI modifications), n1gp & TREZ (data)
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+.topbanner {
+  background-color: #283C7E;
+  font-weight: bold;
+  color: white;
+  border-color: gray;
+  border-style: solid;
+  border-bottom-color: #111111;
+  padding-left: 5px;
+}
+
+h1 {
+  font-size: large;
+}
+
+h3 {
+  font-size: large;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Roboto Light', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  }
+
+.mainBody {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #283C7E;
+    border-color: #CD8F00;
+    border-style: solid;
+    border-top-color: #111111;
+  }
+  
+  .navbar li {
+    float: left;
+  }
+  
+  .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  .navbar li a:hover {
+    background-color: #344780;
+  }
+
+  .active {
+    background-color: #06237A;
+  }
+
+  .anchorButton {
+    display: block;
+    width: 275px;
+    background: #283C7E;
+    border-radius: 100px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .anchorButton:hover {    
+    background: #344780;
+  }
+
+  .footer {
+      border-top: #111111;
+      border-right: #FFFFFF;
+      border-left:  #FFFFFF;
+      border-bottom:  #FFFFFF;
+      border-style: solid;
+  }
+  
+  .socialMediaIcons {
+    width: 50px;
+    height: 50px;
+ }
+
+td {
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+.chipImage {
+  vertical-align: middle;
+  border-left: none;
+}
+
+.chipTypeImage {
+  border-left: none;
+  background-color: #282828;
+  color: white;
+}
+
+.chipSpan {  
+  font-size: 20px;
+  text-align: center;
+  border-left: none;
+  background-color: #282828;
+  color: white;
+}
+
+.folderSpan {
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.folderCount {
+  font-weight: bold; 
+  font-size: 20px;
+  text-align: center;
+  background-color: #282828;
+  color: white;
+}
+
+.bntable{  
+  border-collapse: separate;
+  border-spacing: 0px 2px;
+}
